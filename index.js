@@ -11,3 +11,17 @@ function wrapAdjective(flair="*") {
     }
 }
 
+const Calculator = {
+    add: (num1, num2) => (num1+num2),
+    subtract: (num1, num2) => (num1-num2),
+    multiply: (num1, num2) => (num1*num2),
+    divide: (num1, num2) => (num1/num2)
+}
+
+function actionApplyer(startInt, arrayOfFunctions) {
+    for (let i = 0; i < arrayOfFunctions.length; i++) {
+        startInt = arrayOfFunctions[i](startInt)
+        debugger
+    }
+    return startInt;
+}
